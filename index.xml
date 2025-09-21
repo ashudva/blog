@@ -10,7 +10,7 @@
 <atom:link href="https://ashudva.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.24</generator>
-<lastBuildDate>Sun, 21 Sep 2025 21:16:42 GMT</lastBuildDate>
+<lastBuildDate>Sun, 21 Sep 2025 21:24:42 GMT</lastBuildDate>
 <item>
   <title>Solution Approach - Analytics Vidhya November Jobathoon</title>
   <link>https://ashudva.github.io/blog/posts/2021-11-22-Approach_AV_Jobathon_Nov2021/</link>
@@ -77,7 +77,7 @@ Final Model
   <category>competition</category>
   <category>solution</category>
   <guid>https://ashudva.github.io/blog/posts/2021-11-22-Approach_AV_Jobathon_Nov2021/</guid>
-  <pubDate>Sun, 21 Sep 2025 21:16:42 GMT</pubDate>
+  <pubDate>Sun, 21 Sep 2025 21:24:42 GMT</pubDate>
   <media:content url="https://ashudva.github.io/blog/posts/2021-11-22-Approach_AV_Jobathon_Nov2021/AV-Nov.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 <item>
@@ -2044,7 +2044,7 @@ font-style: inherit;">'plots/base.jpg'</span>)</span>
   <category>NLP</category>
   <category>LLM</category>
   <guid>https://ashudva.github.io/blog/posts/2021-04-27-ConvnetBiLSTM-C50/</guid>
-  <pubDate>Sun, 21 Sep 2025 21:16:42 GMT</pubDate>
+  <pubDate>Sun, 21 Sep 2025 21:24:42 GMT</pubDate>
   <media:content url="https://ashudva.github.io/blog/posts/2021-04-27-ConvnetBiLSTM-C50/base.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -2135,7 +2135,7 @@ font-style: inherit;">;</span></span>
   <category>tutorial</category>
   <category>productivity</category>
   <guid>https://ashudva.github.io/blog/posts/2020-12-30-Fira-Code/</guid>
-  <pubDate>Sun, 21 Sep 2025 21:16:42 GMT</pubDate>
+  <pubDate>Sun, 21 Sep 2025 21:24:42 GMT</pubDate>
   <media:content url="https://ashudva.github.io/blog/posts/2020-12-30-Fira-Code/fira-code.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 <item>
@@ -2295,7 +2295,7 @@ Abstract
   <category>NLP</category>
   <category>LLM</category>
   <guid>https://ashudva.github.io/blog/posts/2021-05-26-DistilBERT/</guid>
-  <pubDate>Sun, 21 Sep 2025 21:16:42 GMT</pubDate>
+  <pubDate>Sun, 21 Sep 2025 21:24:42 GMT</pubDate>
   <media:content url="https://ashudva.github.io/blog/posts/2021-05-26-DistilBERT/huggingface.png" medium="image" type="image/png" height="80" width="144"/>
 </item>
 <item>
@@ -5020,7 +5020,7 @@ font-style: inherit;">7</span>)</span>
   <category>EDA</category>
   <category>Visualization</category>
   <guid>https://ashudva.github.io/blog/posts/2021-11-30-EDA/</guid>
-  <pubDate>Sun, 21 Sep 2025 21:16:42 GMT</pubDate>
+  <pubDate>Sun, 21 Sep 2025 21:24:42 GMT</pubDate>
   <media:content url="https://ashudva.github.io/blog/posts/2021-11-30-EDA/eda.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -6946,7 +6946,7 @@ font-style: inherit;">=</span> pca.inverse_transform(components)</span>
  ]]></description>
   <category>tutorial</category>
   <guid>https://ashudva.github.io/blog/posts/2021-06-10-PCA/</guid>
-  <pubDate>Sun, 21 Sep 2025 21:16:42 GMT</pubDate>
+  <pubDate>Sun, 21 Sep 2025 21:24:42 GMT</pubDate>
   <media:content url="https://ashudva.github.io/blog/posts/2021-06-10-PCA/pca.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
@@ -13059,7 +13059,7 @@ if (IPython.notebook.kernel !== null) {
   <category>machine-learning</category>
   <category>tutorial</category>
   <guid>https://ashudva.github.io/blog/posts/2020-02-13-Linear-Classifiers/</guid>
-  <pubDate>Sun, 21 Sep 2025 21:16:42 GMT</pubDate>
+  <pubDate>Sun, 21 Sep 2025 21:24:42 GMT</pubDate>
   <media:content url="https://ashudva.github.io/blog/posts/2020-02-13-Linear-Classifiers/db.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
@@ -15707,7 +15707,7 @@ font-style: inherit;">=</span>accuracy)</span></code></pre></div></div>
   <category>project</category>
   <category>machine-learning</category>
   <guid>https://ashudva.github.io/blog/posts/2020-01-22-HAR/</guid>
-  <pubDate>Sun, 21 Sep 2025 21:16:42 GMT</pubDate>
+  <pubDate>Sun, 21 Sep 2025 21:24:42 GMT</pubDate>
   <media:content url="https://ashudva.github.io/blog/posts/2020-01-22-HAR/har.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 <item>
@@ -23681,7 +23681,7 @@ if (IPython.notebook.kernel !== null) {
   <category>Visualization</category>
   <category>EDA</category>
   <guid>https://ashudva.github.io/blog/posts/2020-12-27-Bird-Migration/</guid>
-  <pubDate>Sun, 21 Sep 2025 21:16:42 GMT</pubDate>
+  <pubDate>Sun, 21 Sep 2025 21:24:42 GMT</pubDate>
   <media:content url="https://ashudva.github.io/blog/posts/2020-12-27-Bird-Migration/bird_migration.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
@@ -26619,7 +26619,7 @@ font-style: inherit;">~</span> .)</span></code></pre></div></div>
   <category>Visualization</category>
   <category>EDA</category>
   <guid>https://ashudva.github.io/blog/posts/2020-10-10-Gapminder/</guid>
-  <pubDate>Sun, 21 Sep 2025 21:16:42 GMT</pubDate>
+  <pubDate>Sun, 21 Sep 2025 21:24:42 GMT</pubDate>
   <media:content url="https://ashudva.github.io/blog/posts/2020-10-10-Gapminder/gapminder.png" medium="image" type="image/png" height="106" width="144"/>
 </item>
 </channel>
