@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="The case study consists of analysis of migration patterns of three birds">
 
-<title>“Birds Migration Patterns” – Blog</title>
+<title>Birds Migration Patterns – Beyond the Loss</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Blog</span>
+    <span class="navbar-title">Beyond the Loss</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -135,12 +136,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ashudva/"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/ashudva/"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -155,8 +156,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">“Birds Migration Patterns”</h1>
-                      </div>
+      <h1 class="title">Birds Migration Patterns</h1>
+                  <div>
+        <div class="description">
+          The case study consists of analysis of migration patterns of three birds
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">case-study</div>
+                <div class="quarto-category">Visualization</div>
+                <div class="quarto-category">EDA</div>
+              </div>
+                  </div>
   </div>
     
   
@@ -179,22 +190,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<blockquote class="blockquote">
-<p>“The case study consists of analysis of migration patterns of three birds”</p>
-</blockquote>
-<ul>
-<li>toc: false</li>
-<li>branch: master</li>
-<li>badges: true</li>
-<li>comments: true</li>
-<li>categories: [case-study, notebook, python]</li>
-<li>image: bird_migration.png</li>
-<li>hide: false</li>
-<li>search_exclude: true <!-- - metadata_key1: metadata_value1 --> <!-- - metadata_key2: metadata_value2 --></li>
-</ul>
 <section id="same-old-quotidian-work-of-importing-libraries-and-the-data" class="level3">
 <h3 class="anchored" data-anchor-id="same-old-quotidian-work-of-importing-libraries-and-the-data">Same old quotidian work of importing libraries and the data</h3>
-<div id="cell-3" class="cell" data-execution_count="3">
+<div id="cell-2" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -283,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="cell-4" class="cell" data-execution_count="2">
+<div id="cell-3" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>birddata.info</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>&lt;bound method DataFrame.info of        altitude               date_time  device_info_serial   direction  \
@@ -315,7 +313,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [61920 rows x 8 columns]&gt;</code></pre>
 </div>
 </div>
-<div id="cell-5" class="cell" data-execution_count="3">
+<div id="cell-4" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>birddata.tail()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
@@ -398,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The data consists of almost <strong>62,000</strong> data points and 9 features or columns</p>
-<div id="cell-7" class="cell" data-execution_count="4">
+<div id="cell-6" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>birddata.bird_name.value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>Nico     21121
@@ -410,7 +408,7 @@ Name: bird_name, dtype: int64</code></pre>
 <p>There are <strong>3 types of birds</strong> in our dataset, named <em>Nico</em>, <em>Sanne</em>, <em>Eric</em></p>
 <p>Linear estimation - because the earth is not flat - of flight trajectory of bird migration of a particular bird <strong>“Eric”</strong>. The trajectory will be substantially distorted because we have not done any <em>Cartographic Projection</em> of the flight trajectory.</p>
 <p>This plot is just to get a rought look at the flight trajectory of a bird</p>
-<div id="cell-11" class="cell" data-execution_count="5">
+<div id="cell-10" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> birddata.bird_name <span class="op">==</span> <span class="st">"Eric"</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> birddata.longitude[ind], birddata.latitude[ind]</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>), dpi<span class="op">=</span><span class="dv">100</span>)</span>
@@ -1360,7 +1358,7 @@ if (IPython.notebook.kernel !== null) {
 </div>
 </div>
 <p>Let’s plot the flight trajectory for all of three birds</p>
-<div id="cell-13" class="cell" data-execution_count="6">
+<div id="cell-12" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>birds <span class="op">=</span> birddata.bird_name.unique()</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>), dpi<span class="op">=</span><span class="dv">100</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> bird <span class="kw">in</span> birds:</span>
@@ -2313,7 +2311,7 @@ if (IPython.notebook.kernel !== null) {
 </div>
 </div>
 <p>To further proceed, we would like to chech if our data consists of <strong>missing values</strong> and handle them accordingly We’ll be using sklearn for the preprocessing of the data and handling the missing values</p>
-<div id="cell-15" class="cell" data-execution_count="7">
+<div id="cell-14" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>birddata.isnull().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>altitude                0
@@ -2328,13 +2326,13 @@ dtype: int64</code></pre>
 </div>
 </div>
 <p>Two columns <em>direction</em> and <em>speed_2d</em> consists of same no. of missing values but for <strong>direction</strong> column <strong>mean is not an appropriate approximation</strong>. Therefor we’ll first impute <strong>speed_2d</strong> with mean and then we’ll use <strong>n_neighbours strategy</strong> for imputation of <strong>direction</strong></p>
-<div id="cell-17" class="cell" data-execution_count="8">
+<div id="cell-16" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.impute <span class="im">import</span> SimpleImputer, KNNImputer</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># default args are what we want i.e. missing_values=nan, strategy='mean'</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>imputer <span class="op">=</span> SimpleImputer()</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>birddata[<span class="st">"speed_2d"</span>] <span class="op">=</span> imputer.fit_transform(birddata[[<span class="st">'speed_2d'</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-18" class="cell" data-execution_count="9">
+<div id="cell-17" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>birddata.isnull().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>altitude                0
@@ -2349,12 +2347,12 @@ dtype: int64</code></pre>
 </div>
 </div>
 <p>Let’s impute the <strong>direction</strong> column with default args</p>
-<div id="cell-20" class="cell" data-scrolled="true" data-execution_count="10">
+<div id="cell-19" class="cell" data-scrolled="true" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>imputer <span class="op">=</span> KNNImputer()</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>imputer.fit(birddata.loc[:, <span class="st">'direction'</span>:<span class="st">'speed_2d'</span>])</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>birddata.loc[:, <span class="st">'direction'</span>:<span class="st">'speed_2d'</span>] <span class="op">=</span> imputer.transform(birddata.loc[:, <span class="st">'direction'</span>:<span class="st">'speed_2d'</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-21" class="cell" data-execution_count="11">
+<div id="cell-20" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>birddata.tail()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <div>
@@ -2437,7 +2435,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <p>Ommit the last row as it’s unnecessarily introduced into the dataset.</p>
-<div id="cell-23" class="cell" data-execution_count="12">
+<div id="cell-22" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>birddata <span class="op">=</span> birddata.iloc[:<span class="op">-</span><span class="dv">1</span>, :]</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>birddata.tail()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
@@ -2520,7 +2518,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-24" class="cell" data-execution_count="13">
+<div id="cell-23" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>birddata.isnull().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>altitude              0
@@ -2535,7 +2533,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <p>Let’s try plotting a <em>histogram</em> of <em>speed_2d</em> for a particular bird <strong>Eric</strong></p>
-<div id="cell-26" class="cell" data-execution_count="14">
+<div id="cell-25" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ind is already defined above for "Eric"</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>speed <span class="op">=</span> birddata.speed_2d[ind]</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>), dpi<span class="op">=</span><span class="dv">100</span>)</span>
@@ -3485,37 +3483,37 @@ if (IPython.notebook.kernel !== null) {
 </div>
 </div>
 <p>Notice that in our dataset we have a column that consists of datetime, so lets check what is the datatype of this column</p>
-<div id="cell-28" class="cell" data-execution_count="15">
+<div id="cell-27" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(birddata.date_time[<span class="dv">0</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>str</code></pre>
 </div>
 </div>
-<div id="cell-29" class="cell" data-execution_count="16">
+<div id="cell-28" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>birddata.date_time[<span class="dv">0</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>'2013-08-15 00:18:08+00'</code></pre>
 </div>
 </div>
 <p>datetime in our dataset is in str format and to be able to perform computation - computing time interval between two data points - on datetime we would like it convert to a datetime object</p>
-<div id="cell-31" class="cell" data-execution_count="17">
+<div id="cell-30" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime <span class="im">as</span> dt</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co"># remove '+00 from the strings as the time is already in UTC'</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>timestamps <span class="op">=</span> birddata.date_time</span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>timestamps <span class="op">=</span> [stamp[:<span class="op">-</span><span class="dv">3</span>] <span class="cf">for</span> stamp <span class="kw">in</span> timestamps]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-32" class="cell" data-execution_count="18">
+<div id="cell-31" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>timestamps[:<span class="dv">3</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>['2013-08-15 00:18:08', '2013-08-15 00:48:07', '2013-08-15 01:17:58']</code></pre>
 </div>
 </div>
-<div id="cell-33" class="cell" data-execution_count="19">
+<div id="cell-32" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># convert str to a datetime object to be able to perform arithmetic operation on it</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>timestamps <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> str_stamp: dt.datetime.strptime(</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    str_stamp, <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S"</span>), timestamps))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-34" class="cell" data-execution_count="20">
+<div id="cell-33" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>birddata[<span class="st">"timestamp"</span>] <span class="op">=</span> pd.Series(timestamps, index<span class="op">=</span>birddata.index)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>SettingWithCopyWarning: 
@@ -3526,7 +3524,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   birddata["timestamp"] = pd.Series(timestamps, index=birddata.index)</code></pre>
 </div>
 </div>
-<div id="cell-35" class="cell" data-scrolled="true" data-execution_count="21">
+<div id="cell-34" class="cell" data-scrolled="true" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>birddata.tail()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
 <div>
@@ -3614,20 +3612,20 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
-<div id="cell-36" class="cell" data-execution_count="22">
+<div id="cell-35" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>birddata.timestamp[<span class="dv">0</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>Timestamp('2013-08-15 00:18:08')</code></pre>
 </div>
 </div>
-<div id="cell-37" class="cell" data-execution_count="23">
+<div id="cell-36" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>birddata.timestamp[<span class="dv">4</span>] <span class="op">-</span> birddata.timestamp[<span class="dv">3</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 <pre><code>Timedelta('0 days 00:29:51')</code></pre>
 </div>
 </div>
 <p>Now that we have our timestamp in place, we’d like to see how often or when the data was collected in the process. Also for this we’ll limit ourselves to <em>Eric</em></p>
-<div id="cell-39" class="cell" data-execution_count="24">
+<div id="cell-38" class="cell" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>times <span class="op">=</span> birddata.timestamp[birddata.bird_name <span class="op">==</span> <span class="st">"Eric"</span>]</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>elapsed_time <span class="op">=</span> [time <span class="op">-</span> times[<span class="dv">0</span>] <span class="cf">for</span> time <span class="kw">in</span> times]</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>), dpi<span class="op">=</span><span class="dv">100</span>)</span>
@@ -4577,7 +4575,7 @@ if (IPython.notebook.kernel !== null) {
 </div>
 </div>
 <p>Our next goal is to find when does “Eric” migrate. To achieve that we’ll <strong>plot the daily mean speed</strong> of Eric. The data is recorded unevenly i.e.&nbsp;on some days data was collected more times and some days it was collected less no. of times. We’ll start by getting indices of speed_2d that were collected on the same day and then take mean of those speeds, followed by plotting them to see if there’s any pattern.</p>
-<div id="cell-41" class="cell" data-execution_count="25">
+<div id="cell-40" class="cell" data-execution_count="25">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> birddata[birddata.bird_name <span class="op">==</span> <span class="st">"Eric"</span>]</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>elapsed_days <span class="op">=</span> np.array(elapsed_time) <span class="op">/</span> dt.timedelta(days<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>daily_mean_speed <span class="op">=</span> []</span>
@@ -4591,7 +4589,7 @@ if (IPython.notebook.kernel !== null) {
 <span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>        next_day <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>        inds <span class="op">=</span> []</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-42" class="cell" data-execution_count="26">
+<div id="cell-41" class="cell" data-execution_count="26">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>,<span class="dv">5</span>), dpi<span class="op">=</span><span class="dv">100</span>)</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>plt.plot(daily_mean_speed)</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Days"</span>)</span>
@@ -5546,7 +5544,7 @@ if (IPython.notebook.kernel !== null) {
 <section id="cartographic-projection-using-cartopy" class="level1">
 <h1>Cartographic Projection using Cartopy</h1>
 <p>Earlier we tried plotting migration pattern of birds but it was not quite what we were looking for because it was not a cartographic projection. So now we’ll use <em>Cartopy</em> for <em>cartographic projection</em> of flight patterns of the birds.</p>
-<div id="cell-47" class="cell" data-execution_count="27">
+<div id="cell-46" class="cell" data-execution_count="27">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cartopy.crs <span class="im">as</span> ccrs</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cartopy.feature <span class="im">as</span> cfeature</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -6512,7 +6510,7 @@ if (IPython.notebook.kernel !== null) {
 <section id="analysis-for-each-bird" class="level1">
 <h1>Analysis for each bird</h1>
 <p>We’ll now group the data by <strong>bird_name</strong> to get the <strong>average 2D speed</strong> of the birds</p>
-<div id="cell-50" class="cell" data-execution_count="28">
+<div id="cell-49" class="cell" data-execution_count="28">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> birddata.groupby(<span class="st">'bird_name'</span>)</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> pd.Series(birds, name<span class="op">=</span><span class="st">"Bird Name"</span>)</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>mean_speeds <span class="op">=</span> data.speed_2d.mean()</span>
@@ -6586,7 +6584,7 @@ if (IPython.notebook.kernel !== null) {
 </div>
 </div>
 </div>
-<div id="cell-51" class="cell" data-execution_count="29">
+<div id="cell-50" class="cell" data-execution_count="29">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>mean_altitudes <span class="op">=</span> data.altitude.mean()</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>data.altitude.describe().set_index(names)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
@@ -6661,7 +6659,7 @@ if (IPython.notebook.kernel !== null) {
 <section id="mean-altitude-at-each-day" class="level2">
 <h2 class="anchored" data-anchor-id="mean-altitude-at-each-day">Mean Altitude at each day</h2>
 <p>We’ll now group our data by each date to get the mean altitude of each day</p>
-<div id="cell-54" class="cell" data-execution_count="30">
+<div id="cell-53" class="cell" data-execution_count="30">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert date_time to pd.datetime objects</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>birddata.date_time <span class="op">=</span> pd.to_datetime(birddata.date_time)</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>birddata[<span class="st">"date"</span>] <span class="op">=</span> birddata.date_time.dt.date</span>
@@ -6698,7 +6696,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 Name: altitude, Length: 259, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cell-55" class="cell" data-execution_count="31">
+<div id="cell-54" class="cell" data-execution_count="31">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>grouped_birdday <span class="op">=</span> birddata.groupby([<span class="st">"bird_name"</span>, <span class="st">"date"</span>])</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>mean_altitudes_perday <span class="op">=</span> grouped_birdday.altitude.mean()</span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -6713,7 +6711,7 @@ Eric       2013-08-15     74.988095
 Name: altitude, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cell-56" class="cell" data-execution_count="32">
+<div id="cell-55" class="cell" data-execution_count="32">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>eric_daily_speed  <span class="op">=</span> grouped_birdday.speed_2d.mean()[<span class="st">"Eric"</span>]</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>sanne_daily_speed <span class="op">=</span> grouped_birdday.speed_2d.mean()[<span class="st">"Sanne"</span>]</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>nico_daily_speed  <span class="op">=</span> grouped_birdday.speed_2d.mean()[<span class="st">"Nico"</span>]</span>

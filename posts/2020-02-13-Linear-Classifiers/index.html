@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Implementation of Supervised Learning Algorithms - Perceptron, Average Perceptron, and Pegasos - in pure python code">
 
-<title>Perceptron, Average Perceptron and Pegasos – Blog</title>
+<title>Perceptron, Average Perceptron and Pegasos – Beyond the Loss</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -150,7 +151,7 @@ window.Quarto = {
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Blog</span>
+    <span class="navbar-title">Beyond the Loss</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -164,12 +165,12 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/ashudva/"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/ashudva/"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -185,7 +186,16 @@ window.Quarto = {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Perceptron, Average Perceptron and Pegasos</h1>
-                      </div>
+                  <div>
+        <div class="description">
+          Implementation of Supervised Learning Algorithms - Perceptron, Average Perceptron, and Pegasos - in pure python code
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">machine-learning</div>
+                <div class="quarto-category">tutorial</div>
+              </div>
+                  </div>
   </div>
     
   
@@ -208,30 +218,17 @@ window.Quarto = {
 
 
 
-<blockquote class="blockquote">
-<p>“Implementation of Supervised Learning Algorithms - Perceptron, Average Perceptron, and Pegasos - in pure python code”</p>
-</blockquote>
-<ul>
-<li>toc: false</li>
-<li>branch: master</li>
-<li>badges: true</li>
-<li>comments: true</li>
-<li>categories: [notebook, project, python]</li>
-<li>image: db.png</li>
-<li>hide: false</li>
-<li>search_exclude: true</li>
-</ul>
 <section id="abstract" class="level1">
 <h1>Abstract</h1>
 <p>The goal of this project is to write three Supervised Learning Algorithms - Perceptron, Average Perceptron, and Pegasos - in pure python code. I’ll use <code>numpy</code> for handling and creating numerical arrays. The parameter estimation is done through <code>Stochastic Gradient Descent</code> algorithm.</p>
-<div id="cell-3" class="cell" data-execution_count="12">
+<div id="cell-2" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="test-cases" class="level1">
 <h1>Test Cases</h1>
 <p>I’ve created some test cases for each algorithm that I’ll be writing, to test the correctness of the algorithm. e.g.&nbsp; <code>check_get_order()</code> <code>check_hinge_loss_single()</code> <code>check_hinge_loss_full()</code></p>
-<div id="cell-5" class="cell" hidden="true" data-execution_count="13">
+<div id="cell-4" class="cell" hidden="true" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
@@ -709,13 +706,13 @@ window.Quarto = {
 <section id="hinge-loss" class="level2">
 <h2 class="anchored" data-anchor-id="hinge-loss">Hinge Loss</h2>
 <p>HINGE_LOSS (<span class="math inline">\(\{(\ x^{(i)},\ y^{(i)}: i = 1.....n\ )\}\)</span>, <span class="math inline">\(\theta\)</span>, <span class="math inline">\(\theta_0\)</span>): <br>   loss <span class="math inline">\(\gets\)</span> 0 <br>   for i <span class="math inline">\(\gets\)</span> 1….n: <br>     <span class="math inline">\(z\)</span> <span class="math inline">\(\gets\)</span> $ y^{(i)} (. x^{(i)} + _0 ) $ <br>     <span class="math inline">\(loss\ \gets loss + max(0, 1 - z)\)</span> <br>   return <span class="math inline">\(loss \div n\)</span> <br></p>
-<div id="cell-8" class="cell" data-execution_count="14">
+<div id="cell-7" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hinge_loss_single(feature_vector, label, theta, theta_0):</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> theta <span class="op">@</span> feature_vector <span class="op">+</span> theta_0</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.maximum(<span class="dv">0</span>, <span class="dv">1</span> <span class="op">-</span> y <span class="op">*</span> label)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-9" class="cell" data-execution_count="15">
+<div id="cell-8" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hinge_loss_full(feature_matrix, labels, theta, theta_0):</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> <span class="dv">0</span></span>
@@ -743,7 +740,7 @@ $ _ =
                         -y^i,\ \ \ \ \text{otherwise}
                         \end{cases}\)</span> <br> therefore the gradient descent update will be: <br> <span class="math inline">\(\theta \gets \theta + \eta . y^i x^i\)</span> <br> <span class="math inline">\(\theta_0 \gets \theta_0 + y^i\)</span></p>
 <p>PERCEPTRON (<span class="math inline">\(\{(\ x^{(i)},\ y^{(i)}: i = 1.....n\ )\}\)</span>, T): <br>   <span class="math inline">\(\theta \gets 0 \ vector\)</span><br>   <span class="math inline">\(\theta_0 \gets 0.0\)</span> <br>   for t <span class="math inline">\(\gets\)</span> 1….T: <br>    Randomly shuffle indices <br>    for i in indices: <br>     if $ y^{(i)} (. x^{(i)} + _0 ) $: <br>      <span class="math inline">\(\theta \gets \theta + y^{(i)} . x^{(i)}\)</span> <br>      <span class="math inline">\(\theta_0 \gets \theta_0 + y^{(i)}\)</span> <br></p>
-<div id="cell-11" class="cell" data-execution_count="16">
+<div id="cell-10" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> perceptron_single_step_update(</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        feature_vector,</span>
@@ -755,7 +752,7 @@ $ _ =
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        current_theta_0 <span class="op">+=</span> label</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> current_theta, current_theta_0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-12" class="cell" data-execution_count="17">
+<div id="cell-11" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> perceptron(feature_matrix, labels, T):</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> random</span>
@@ -774,7 +771,7 @@ $ _ =
 <section id="average-perceptron" class="level2">
 <h2 class="anchored" data-anchor-id="average-perceptron">2. Average Perceptron</h2>
 <p>The Average Perceptron algorithm gives better results than the simple Perceptron algorithm in most of the cases. <br> Average Perceptron is analogous to the simple Perceptron except that we also need to keep track of the sum of <span class="math inline">\(\theta\)</span>’s got after each run of the algorithm and then finally return the Average of those.</p>
-<div id="cell-14" class="cell" data-execution_count="18">
+<div id="cell-13" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> average_perceptron(feature_matrix, labels, T):</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> random</span>
@@ -796,7 +793,7 @@ $ _ =
 </section>
 <section id="pegasos" class="level2">
 <h2 class="anchored" data-anchor-id="pegasos">3. Pegasos</h2>
-<div id="cell-17" class="cell" data-execution_count="19">
+<div id="cell-16" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pegasos_single_step_update(feature_vector, label, L, eta, current_theta,</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                               current_theta_0):</span>
@@ -806,7 +803,7 @@ $ _ =
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> c <span class="op">*</span> current_theta <span class="op">+</span> (d <span class="op">*</span> feature_vector), current_theta_0 <span class="op">+</span> d</span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> c <span class="op">*</span> current_theta, current_theta_0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-18" class="cell" data-execution_count="20">
+<div id="cell-17" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pegasos(feature_matrix, labels, T, L):</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> random</span>
@@ -828,7 +825,7 @@ $ _ =
 </section>
 <section id="testing" class="level2">
 <h2 class="anchored" data-anchor-id="testing">Testing</h2>
-<div id="cell-20" class="cell" hidden="true" data-execution_count="21">
+<div id="cell-19" class="cell" hidden="true" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>check_get_order()</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>check_hinge_loss_single()</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>check_hinge_loss_full()</span>
@@ -864,7 +861,7 @@ $ _ =
 <h1>Apply algos on synthetic data</h1>
 <section id="generate-synthetic-data" class="level2">
 <h2 class="anchored" data-anchor-id="generate-synthetic-data">Generate Synthetic Data</h2>
-<div id="cell-23" class="cell" data-execution_count="22">
+<div id="cell-22" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> synth_data_2d(n):</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -878,7 +875,7 @@ $ _ =
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    labels <span class="op">=</span> np.concatenate([class1, class2])</span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> data, labels</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-24" class="cell" data-execution_count="27">
+<div id="cell-23" class="cell" data-execution_count="27">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> synth_data_2d(<span class="dv">1000</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib <span class="im">as</span> mpl</span>
@@ -1836,13 +1833,13 @@ if (IPython.notebook.kernel !== null) {
 <section id="decesion-boundaries" class="level2">
 <h2 class="anchored" data-anchor-id="decesion-boundaries">Decesion Boundaries</h2>
 <p>Get parameters <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\theta_0\)</span> for each algorithm and plot the corresponding decesion boundary.</p>
-<div id="cell-27" class="cell" data-execution_count="24">
+<div id="cell-26" class="cell" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>ap_theta, ap_theta_0 <span class="op">=</span> average_perceptron(X, y, <span class="dv">10</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>p_theta, p_theta_0 <span class="op">=</span> perceptron(X, y, <span class="dv">10</span>)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>peg_theta, peg_theta_0 <span class="op">=</span> pegasos(X, y, <span class="dv">10</span>, <span class="fl">0.01</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-28" class="cell" data-execution_count="28">
+<div id="cell-27" class="cell" data-execution_count="28">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], s<span class="op">=</span><span class="dv">10</span>, c<span class="op">=</span>colors)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>xmin, xmax <span class="op">=</span> plt.axis()[:<span class="dv">2</span>]</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2801,7 +2798,7 @@ if (IPython.notebook.kernel !== null) {
 </div>
 </div>
 <p>Because the Pegasus Algorithm is a Linear Support Vector Machine Algorithm, so let’s plot its Decision and Margin Boundaries.</p>
-<div id="cell-30" class="cell" data-scrolled="false" data-execution_count="26">
+<div id="cell-29" class="cell" data-scrolled="false" data-execution_count="26">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib notebook</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib <span class="im">as</span> mpl</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>mpl.style.use(<span class="st">"ggplot"</span>)</span>
